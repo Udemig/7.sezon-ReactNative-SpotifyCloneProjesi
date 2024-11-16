@@ -12,6 +12,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const SongInfoScreen = () => {
   const navigation = useNavigation();
@@ -50,10 +51,25 @@ const SongInfoScreen = () => {
             <MaterialCommunityIcons
               name="cross-bolnisi"
               size={24}
-              color="white"
+              color="#1DB954"
             />
+
+            <Pressable style={styles.playButton}>
+              <Entypo name="controller-play" size={24} color="white" />
+            </Pressable>
           </View>
         </Pressable>
+
+        <View>
+          <View style={styles.infoWiew}>
+            <View style={styles.infoContainer}>
+              <Text style={styles.infoText}>Album {name} </Text>
+              <Text style={styles.infoText}>Artist {artist} </Text>
+              <Text style={styles.infoText}>Year: {year} </Text>
+            </View>
+            <Entypo name="dots-three-vertical" size={24} color="white" />
+          </View>
+        </View>
       </ScrollView>
     </LinearGradient>
   );
@@ -85,7 +101,46 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   artistText: {color: '#909090', fontSize: 13, fontWeight: 'bold'},
-  controlView: {},
-  downloadButton: {},
-  playButtonView: {},
+  controlView: {
+    flexDirection: 'row',
+    marginHorizontal: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  downloadButton: {
+    backgroundColor: '#1DB954',
+    width: 30,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
+  },
+  playButtonView: {
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center',
+  },
+  playButton: {
+    backgroundColor: '#1DB954',
+    width: 60,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+  },
+  infoWiew: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginHorizontal: 12,
+    marginTop: 10,
+  },
+  infoContainer: {
+    gap: 5,
+  },
+  infoText: {
+    color: 'white',
+    fontWeight: '500',
+    fontSize: 16,
+  },
 });

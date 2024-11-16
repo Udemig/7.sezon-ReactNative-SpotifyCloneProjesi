@@ -1,8 +1,8 @@
 ## Kütüphaneler
 
-npm install @react-navigation/native
-npm install react-native-screens react-native-safe-area-context
-npm install @react-navigation/native-stack
-npm install @react-navigation/bottom-tabs
-npm i react-native-linear-gradient
-npm i react-native-vector-icons
+- @react-navigation/native
+- react-native-screens react-native-safe-area-context
+- @react-navigation/native-stack
+- @react-navigation/bottom-tabs
+- react-native-linear-gradient
+- react-native-vector-icons
